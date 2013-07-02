@@ -2,27 +2,27 @@
 define(['angular'], function() {
   // this is where our app definition is
   var app = angular
-    .module('app')
+    .module('app', [])
     .config(['$routeProvider', function($routeProvider) {
       // here we specify routes
       // which HTML and JS to execute when a certain route is requested
       $routeProvider
         .when('/', {
-          templateUrl: 'template/venom/list.html',
-          controller: 'ListCtrl'
+          templateUrl: 'modules/index/IndexView.html',
+          controller: 'IndexController'
         })
-        .when('/category/:id', {
-          templateUrl: 'template/venom/category.html',
-          controller: 'CategoryCtrl'
+        .when('/about', {
+          templateUrl: 'modules/about/AboutView.html',
+          controller: 'AboutController'
         })
-        .when('/food/:id', {
-          templateUrl: 'template/venom/food.html',
-          controller: 'FoodCtrl'
-        })
-        .when('/orders', {
-          templateUrl: 'template/venom/orders.html',
-          controller: 'OrdersCtrl'
-        })
+ //       .when('/category/:id', {
+ //         templateUrl: 'template/venom/category.html',
+ //         controller: 'CategoryCtrl'
+ //       })
+ //       .when('/food/:id', {
+ //         templateUrl: 'template/venom/food.html',
+ //         controller: 'FoodCtrl'
+ //       })
         .otherwise({
           redirectTo: '/'
         });

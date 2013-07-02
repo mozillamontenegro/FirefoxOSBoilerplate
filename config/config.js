@@ -19,7 +19,7 @@ require.config({
     'app',
 
     // dependencies
-    'angular'
+    'angular',
 
     // services
 //    'js/services/database.js',
@@ -28,7 +28,8 @@ require.config({
 //    'js/services/shaking.js',
 
     // controllers
-//    'js/controllers/list.js',
+    'modules/index/IndexController.js',
+    'modules/about/AboutController.js'
 //    'js/controllers/category.js',
 //    'js/controllers/food.js',
 //    'js/controllers/orders.js'
